@@ -1,20 +1,19 @@
 import profileImg from "../assets/man2.jpg";
 import '../profileCard.css';
 
-function ProfileCard(){
+function ProfileCard(props){
    return (
         <div className="container">
             <img className="profile-img" src={profileImg} alt="Ruchi" />
 
-            <h2>Ruchi</h2>
-            <h4>Frontend Developer</h4>
+            <h2>{props.name}</h2>
+            <h4>{props.role}</h4>
 
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Deserunt, architecto.
+               {props.about}
             </p>
 
-            <button>Contact Me</button>
+            <button>{props.btn}</button>
         </div>
     );
 }
